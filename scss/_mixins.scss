@@ -1,0 +1,31 @@
+// ----------------MIXINS
+
+@mixin display-f($dire, $flow, $justify, $align) {
+    display: flex;
+    flex-flow: $dire $flow;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// @include display-f(row, wrap, space-around, center);
+
+// ----------------MAPS
+$colorMap: ("darkBlack": #0d0d0d,
+    "lightBlack": #01010180,
+    "white": #f0f0e6,
+    "golden": #d9a74a,
+    "lightGolden": #f2d091,
+);
+
+$fontMap: ("1-rem": 1rem,
+    "1.5-rem": 1.5rem,
+    "2-rem": 2rem,
+    "2.5-rem": 2.5rem,
+    "3-rem": 3rem,
+    "3.5-rem": 3.5rem,
+    "4-rem": 4rem,
+    "4.5-rem": 4.5rem,
+    "5-rem": 5rem,
+    "5.5-rem": 5.5rem,
+    "6-rem": 6rem,
+);

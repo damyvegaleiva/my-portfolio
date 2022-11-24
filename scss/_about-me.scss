@@ -1,0 +1,19 @@
+.about-me {
+    p {
+        font-size: 1.5rem;
+        padding: 25px;
+        line-height: 35px;
+        letter-spacing: 0.15rem;
+    }
+
+    span {
+        background: map-get($map: $colorMap, $key:"lightGolden");
+    }
+
+    .highlight-span {
+        background: none;
+        position: relative;
+        border-bottom: 2px solid map-get($map: $colorMap, $key:"lightGolden");
+    }
+
+}

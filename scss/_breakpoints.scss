@@ -1,0 +1,39 @@
+@media only screen and (min-width: 768px) {
+    .hamburguer-btn {
+        display: none;
+    }
+
+    .nav.menu {
+        flex-direction: row !important;
+        display: block !important;
+        position: static !important;
+
+    }
+
+    .image-navbar {
+        display: block !important;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+    }
+
+    .nav-link {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            width: 0;
+            height: 3px;
+            border-radius: 2px;
+            background: map-get($map: $colorMap, $key:"lightGolden");
+        }
+
+        &:hover::after {
+            width: 100%;
+            transition: width 0.5s;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f2f2f2;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    margin: 50px auto;
+}
+
+
+.section-heading {
+    font-weight: 400;
+}
+
+.hr-opacity {
+    border: none;
+    border-top: 1px solid map-get($map: $colorMap, $key:"lightGolden");
+    opacity: 0.4;
+    width: 75%;
+    margin: 5px auto;
+
+}
+
+
+.right-box {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
