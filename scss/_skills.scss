@@ -1,0 +1,31 @@
+.marquee-skills {
+    width: 75%;
+    height: 100px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin: auto;
+    max-width: 900px;
+}
+
+.marque-item {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    animation: marqueeAnimation 25s linear infinite;
+
+    svg {
+        height: 50px;
+        padding: 0 30px 0 30px;
+    }
+}
+
+@keyframes marqueeAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

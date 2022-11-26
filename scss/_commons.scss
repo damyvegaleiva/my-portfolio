@@ -23,18 +23,22 @@ header {
 
 
 .section-heading {
-    font-weight: 400;
+    font-weight: 300;
+    font-size: 2rem;
 }
 
 .hr-opacity {
     border: none;
     border-top: 1px solid map-get($map: $colorMap, $key:"lightGolden");
-    opacity: 0.4;
+    opacity: 0.7;
     width: 75%;
     margin: 5px auto;
 
 }
 
+.left-box {
+    display: none;
+}
 
 .right-box {
     text-align: center;

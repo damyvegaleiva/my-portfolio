@@ -23,15 +23,20 @@ header {
 }
 
 .section-heading {
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 2rem;
 }
 
 .hr-opacity {
   border: none;
   border-top: 1px solid #f2d091;
-  opacity: 0.4;
+  opacity: 0.7;
   width: 75%;
   margin: 5px auto;
+}
+
+.left-box {
+  display: none;
 }
 
 .right-box {
@@ -40,38 +45,6 @@ header {
   margin: auto;
 }
 
-@media only screen and (min-width: 768px) {
-  .hamburguer-btn {
-    display: none;
-  }
-  .nav.menu {
-    flex-direction: row !important;
-    display: block !important;
-    position: static !important;
-  }
-  .image-navbar {
-    display: block !important;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-  }
-  .nav-link::after {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
-    width: 0;
-    height: 3px;
-    border-radius: 2px;
-    background: #f2d091;
-  }
-  .nav-link:hover::after {
-    width: 100%;
-    transition: width 0.5s;
-  }
-}
 .home-container {
   margin-top: 100px;
 }
@@ -103,6 +76,9 @@ header {
   -webkit-box-shadow: 1px 1px 149px -1px rgba(0, 0, 0, 0.49);
   -moz-box-shadow: 1px 1px 149px -1px rgba(0, 0, 0, 0.49);
 }
+.home-container .angle-icon {
+  display: none;
+}
 
 .nav-bar {
   width: 100%;
@@ -112,7 +88,6 @@ header {
   padding: 2px 10px;
   position: fixed;
   top: 0;
-  background: #f2d091;
   z-index: 1;
 }
 .nav-bar .nav-menu {
@@ -132,11 +107,13 @@ header {
 .nav-bar .nav-menu .nav-link {
   transition: 0.2s ease;
   text-decoration: none;
-  position: relative;
   color: rgba(0, 0, 0, 0.55);
 }
 .nav-bar .nav-menu .nav-link:hover {
   color: rgba(0, 0, 0, 0.95);
+}
+.nav-bar .image-navbar {
+  display: none;
 }
 .nav-bar .hamburguer-btn {
   display: flex;
@@ -147,9 +124,6 @@ header {
 .nav-bar .hamburguer-btn i {
   font-size: 3.2rem;
 }
-.nav-bar .image-navbar {
-  display: none;
-}
 
 .hamburguer-btn.active {
   animation: 1.5s linear shakey;
@@ -157,6 +131,10 @@ header {
 
 .nav-menu.active {
   left: 0;
+}
+
+.nav-bar.active {
+  background: #f0f0e6;
 }
 
 @keyframes shakey {
@@ -207,14 +185,199 @@ header {
   color: #0d0d0d;
 }
 
-.my-certificates img {
-  display: block;
+.my-certificates .certificates-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-certificates .certificates-carousel img {
   width: 80%;
   margin: auto;
+}
+.my-certificates .certificates-carousel i {
+  cursor: pointer;
+}
+
+.certificate-js.active,
+.certificate-wd.active {
+  display: none;
 }
 
 #contact {
   margin-bottom: 1000px;
+}
+
+.marquee-skills {
+  width: 75%;
+  height: 100px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  margin: auto;
+  max-width: 900px;
+}
+
+.marque-item {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  animation: marqueeAnimation 25s linear infinite;
+}
+.marque-item svg {
+  height: 50px;
+  padding: 0 30px 0 30px;
+}
+
+@keyframes marqueeAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@media screen and (min-width: 992px) {
+  .section-heading {
+    font-size: 3rem;
+  }
+  .nav-bar {
+    width: 30%;
+    background: #f0f0e6;
+  }
+  .nav-bar .nav-menu {
+    position: initial;
+    flex-flow: row wrap;
+    width: initial;
+  }
+  .nav-bar .nav-menu .nav-item {
+    font-size: 1.5rem;
+  }
+  .nav-bar .nav-menu .nav-item .nav-link {
+    position: relative;
+  }
+  .nav-bar .nav-menu .nav-item .nav-link::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    border-radius: 2px;
+    background: #f2d091;
+  }
+  .nav-bar .nav-menu .nav-item .nav-link:hover::after {
+    width: 100%;
+    transition: width 0.5s;
+  }
+  .nav-bar .image-navbar {
+    display: block;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+  .nav-bar .hamburguer-btn {
+    display: none;
+  }
+  .left-box {
+    display: inline;
+    width: 30%;
+    position: fixed;
+    inset: 0;
+    background: url("../images/DamyCoder.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+    background-position-x: 50%;
+  }
+  .right-box {
+    width: 70%;
+    margin-left: 30%;
+  }
+  .right-box header {
+    margin: 0;
+    height: 100vh;
+    position: relative;
+  }
+  .right-box header .home-container {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    margin: auto;
+  }
+  .right-box header .home-container h1 {
+    font-size: 5rem;
+    font-weight: 400;
+  }
+  .right-box header .home-container h1::after {
+    width: 30px;
+    height: 3px;
+    bottom: 18%;
+    left: 50%;
+    transform: translateX(-55%);
+  }
+  .right-box header .home-container p {
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+  .right-box header .home-container img {
+    display: none;
+  }
+  .right-box header .home-container .angle-icon {
+    display: initial;
+    font-size: 2.5rem;
+    color: black;
+    animation: blinky 1s alternate-reverse infinite;
+    color: #d9a74a;
+    padding: 25px 30px;
+    border-radius: 50%;
+    position: relative;
+  }
+  .right-box header .home-container .angle-icon::after {
+    opacity: 0;
+    content: "Click Me";
+    font-size: 1rem;
+    font-weight: 400;
+    color: black;
+    position: absolute;
+    width: auto;
+    height: auto;
+    background: transparent;
+    padding: 0 5px;
+    border: 2px solid wheat;
+    border-radius: 5px;
+    bottom: 60%;
+    right: -30%;
+    font-family: "Poppins", sans-serif;
+  }
+  .right-box header .home-container .angle-icon:hover {
+    animation: step-end;
+  }
+  .right-box header .home-container .angle-icon:hover::after {
+    opacity: 1;
+    transition: opacity 4s;
+  }
+  .right-box .about-me p {
+    width: 50%;
+    margin: auto;
+    min-width: 450px;
+  }
+  .right-box .my-skills svg {
+    height: 75px;
+  }
+  .right-box .my-certificates {
+    width: 50%;
+    margin: auto;
+  }
+}
+@keyframes blinky {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

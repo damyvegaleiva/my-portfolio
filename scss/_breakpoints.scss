@@ -1,39 +1,187 @@
-@media only screen and (min-width: 768px) {
-    .hamburguer-btn {
-        display: none;
+@media screen and (min-width: 992px) {
+
+    .section-heading {
+
+        font-size: 3rem;
     }
 
-    .nav.menu {
-        flex-direction: row !important;
-        display: block !important;
-        position: static !important;
+    .nav-bar {
+        width: 30%;
+        background: map-get($map: $colorMap, $key:"white");
 
-    }
+        .nav-menu {
+            position: initial;
+            flex-flow: row wrap;
+            width: initial;
 
-    .image-navbar {
-        display: block !important;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        object-fit: cover;
-    }
+            .nav-item {
+                font-size: 1.5rem;
 
-    .nav-link {
-        &::after {
-            content: "";
-            position: absolute;
-            top: 20px;
-            left: 0;
-            right: 0;
-            width: 0;
-            height: 3px;
-            border-radius: 2px;
-            background: map-get($map: $colorMap, $key:"lightGolden");
+                .nav-link {
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 20px;
+                        left: 0;
+                        right: 0;
+                        width: 0;
+                        height: 3px;
+                        border-radius: 2px;
+                        background: map-get($map: $colorMap, $key:"lightGolden");
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                        transition: width 0.5s;
+                    }
+                }
+            }
+
+
         }
 
-        &:hover::after {
-            width: 100%;
-            transition: width 0.5s;
+        .image-navbar {
+            display: block;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
         }
+
+        .hamburguer-btn {
+            display: none;
+        }
+    }
+
+    .left-box {
+        display: inline;
+        width: 30%;
+        position: fixed;
+        inset: 0;
+        background: url("../images/DamyCoder.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: 30%;
+        background-position-x: 50%;
+    }
+
+    .right-box {
+        width: 70%;
+        margin-left: 30%;
+
+        header {
+            margin: 0;
+            height: 100vh;
+            position: relative;
+
+            .home-container {
+                position: absolute;
+                top: 40%;
+                width: 100%;
+                margin: auto;
+
+                h1 {
+                    font-size: 5rem;
+                    font-weight: 400;
+
+                    &::after {
+                        width: 30px;
+                        height: 3px;
+                        bottom: 18%;
+                        left: 50%;
+                        transform: translateX(-55%);
+                    }
+                }
+
+                p {
+                    font-size: 2.5rem;
+                    font-weight: 300;
+                }
+
+                img {
+                    display: none;
+                }
+
+                .angle-icon {
+                    display: initial;
+                    font-size: 2.5rem;
+                    color: black;
+                    animation: blinky 1s alternate-reverse infinite;
+                    color: map-get($map: $colorMap, $key: "golden");
+                    padding: 25px 30px;
+                    border-radius: 50%;
+                    position: relative;
+
+                    &::after {
+                        opacity: 0;
+                        content: "Click Me";
+                        font-size: 1rem;
+                        font-weight: 400;
+                        color: black;
+                        position: absolute;
+                        width: auto;
+                        height: auto;
+                        background: transparent;
+                        padding: 0 5px;
+                        border: 2px solid wheat;
+                        border-radius: 5px;
+                        bottom: 60%;
+                        right: -30%;
+                        font-family: "Poppins", sans-serif;
+
+                    }
+
+                    &:hover {
+                        animation: step-end;
+
+                        &::after {
+                            opacity: 1;
+                            transition: opacity 4s;
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        .about-me {
+            p {
+                width: 50%;
+                margin: auto;
+                min-width: 450px;
+            }
+        }
+
+
+        .my-skills {
+            svg {
+                height: 75px;
+            }
+        }
+
+        .my-certificates {
+            width: 50%;
+            margin: auto;
+        }
+
+    }
+
+}
+
+
+
+
+
+@keyframes blinky {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+
     }
 }
