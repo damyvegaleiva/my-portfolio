@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Damy J. Vega Leiva</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
@@ -27,7 +28,7 @@
                 <a href="#certificates" class="nav-link">Certificates</a>
             </li>
             <li class="nav-item">
-                <a href="mailto:damyvegaaleiva@gmail.com" class="nav-link"><i class="fa-regular fa-envelope"></i></a>
+                <a href="mailto:damyvegaleiva@gmail.com" class="nav-link"><i class="fa-regular fa-envelope"></i></a>
             </li>
         </ul>
 
@@ -41,7 +42,7 @@
     <div class="right-box">
         <header>
             <div class="home-container">
-                <h1>Hi, I'm Damy</h1>
+                <h1 class="animate__animated animate__bounce">Hi, I'm Damy</h1>
                 <p>A FrontEnd Developer.</p>
                 <img src="./images/DamyCoder.jpg" alt="">
                 <a class="angle-icon" href="#about-me"><i class="fa-solid fa-angle-down"></i></a>
@@ -294,10 +295,12 @@
             <h2 class="section-heading">{ certificates }</h2>
             <hr class="hr-opacity">
             <div class="certificates-carousel">
-                <i class="fa-solid fa-angle-left" id="angle-left"></i>
-                <img class="certificate-wd" src="./images/certificado-website-1.png"
+                <i class="fa-solid fa-angle-left hidden" id="angle-left"></i>
+                <img class="certificate-wd animate__animated animate__fadeInLeft"
+                    src="./images/certificado-website-1.png"
                     alt="A certificate of a Web Development with a seal of the TOP 10 Performers.">
-                <img class="certificate-js active" src="./images/cenrtificado-javascript-2.png"
+                <img class="certificate-js active animate__animated animate__fadeInRight"
+                    src="./images/cenrtificado-javascript-2.png"
                     alt="A certificate of a JavaScript with a seal of the TOP 10 Performers.">
                 <i class="fa-solid fa-angle-right" id="angle-right"></i>
             </div>

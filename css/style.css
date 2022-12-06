@@ -239,6 +239,9 @@ header {
 .my-certificates .certificates-carousel i:hover {
   opacity: 1;
 }
+.my-certificates .certificates-carousel i.hidden {
+  visibility: hidden;
+}
 
 .certificate-js.active,
 .certificate-wd.active {

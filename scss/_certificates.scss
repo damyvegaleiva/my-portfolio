@@ -23,12 +23,13 @@
             }
         }
 
+        i.hidden {
+            visibility: hidden;
+        }
     }
 }
 
 .certificate-js.active,
 .certificate-wd.active {
     display: none;
-
-
 }
