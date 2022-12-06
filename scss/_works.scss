@@ -1,13 +1,44 @@
-.works-btn {
-    padding: 5px 50px;
-    border-radius: 5px;
-    border: 2px solid map-get($map: $colorMap, $key:"golden");
-    background: map-get($map: $colorMap, $key:"white");
-    font-family: "Poppins", sans-serif;
-    font-size: 1.5rem;
+.my-works {
 
-    a {
-        text-decoration: none;
-        color: map-get($map: $colorMap, $key:"darkBlack");
+    .my-works-item {
+        display: flex;
+        width: 75%;
+        flex-flow: column wrap;
+        margin: auto auto 75px;
+
+        p {
+            width: 70%;
+            margin: auto;
+            letter-spacing: 0.3rem;
+            font-size: 1.5rem;
+            line-height: 30px;
+            letter-spacing: 0.10rem;
+        }
+
+        img {
+            width: 100%;
+            max-width: 1000px;
+            border: 5px solid wheat;
+            border-radius: 10px;
+            margin: auto auto 15px;
+        }
+
+        .works-btn {
+            margin: auto;
+
+            a {
+                text-decoration: none;
+                border: 2px solid #f2d091;
+                padding: 5px 50px;
+                border-radius: 5px;
+                background: #f0f0e6;
+                color: black;
+                transition: background ease-in-out 0.7s, color ease-in-out 0.3s, border ease 0.5s, padding ease 1s;
+                font-size: 1.5rem;
+                margin: auto;
+                width: 100%;
+            }
+        }
     }
+
 }

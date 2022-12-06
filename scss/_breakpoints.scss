@@ -15,7 +15,7 @@
             width: initial;
 
             .nav-item {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
 
                 .nav-link {
                     position: relative;
@@ -155,10 +155,58 @@
             }
         }
 
-
         .my-skills {
+            p {
+                font-size: 1.5rem;
+            }
+
             svg {
                 height: 75px;
+                padding: 0 25px;
+            }
+        }
+
+        .my-works {
+            .my-works-item {
+                flex-flow: row wrap;
+
+                p {
+                    width: 50%;
+                    padding: 0 10px;
+                    font-size: 2.5rem;
+                }
+
+                img {
+                    width: 50%;
+                }
+            }
+
+            .javascript-item {
+
+                img {
+                    order: 1;
+                }
+
+                p {
+                    order: 2;
+                }
+
+                div {
+                    order: 3;
+                }
+            }
+
+
+            .works-btn {
+                a {
+                    &:hover {
+                        cursor: pointer;
+                        background: map-get($map: $colorMap, $key: "golden");
+                        color: #f2f2f2;
+                        border: 0.5px solid map-get($map: $colorMap, $key: "golden");
+                        padding: 5px 15px;
+                    }
+                }
             }
         }
 
@@ -166,14 +214,41 @@
             width: 50%;
             margin: auto;
         }
-
     }
 
 }
 
 
+@media screen and (min-width: 992px) and (max-width: 1226px) {
+    .nav-bar {
+        flex-direction: column;
 
+        .nav-menu {
+            .nav-item {
+                font-size: 1rem;
+            }
+        }
+    }
 
+}
+
+@media screen and (min-width: 1400px) {
+    .nav-bar {
+        .nav-menu {
+            .nav-item {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .my-works {
+        .my-works-item {
+            p {
+                font-size: 2.75rem !important;
+            }
+        }
+    }
+}
 
 @keyframes blinky {
     0% {

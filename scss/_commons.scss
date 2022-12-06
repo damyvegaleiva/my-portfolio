@@ -17,6 +17,12 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+section {
+    &:not(:last-child) {
+        margin-bottom: 100px;
+    }
+}
+
 header {
     margin: 50px auto;
 }
@@ -32,7 +38,7 @@ header {
     border-top: 1px solid map-get($map: $colorMap, $key:"lightGolden");
     opacity: 0.7;
     width: 75%;
-    margin: 5px auto;
+    margin: 5px auto 40px;
 
 }
 

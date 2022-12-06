@@ -18,6 +18,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+section:not(:last-child) {
+  margin-bottom: 100px;
+}
+
 header {
   margin: 50px auto;
 }
@@ -32,7 +36,7 @@ header {
   border-top: 1px solid #f2d091;
   opacity: 0.7;
   width: 75%;
-  margin: 5px auto;
+  margin: 5px auto 40px;
 }
 
 .left-box {
@@ -159,12 +163,17 @@ header {
 }
 .about-me p {
   font-size: 1.5rem;
-  padding: 25px;
+  padding: 0 25px;
   line-height: 35px;
   letter-spacing: 0.15rem;
 }
 .about-me span {
   background: #f2d091;
+}
+.about-me .span-strikethrough {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+  background: none;
 }
 .about-me .highlight-span {
   background: none;
@@ -172,39 +181,68 @@ header {
   border-bottom: 2px solid #f2d091;
 }
 
-.works-btn {
+.my-works .my-works-item {
+  display: flex;
+  width: 75%;
+  flex-flow: column wrap;
+  margin: auto auto 75px;
+}
+.my-works .my-works-item p {
+  width: 70%;
+  margin: auto;
+  letter-spacing: 0.3rem;
+  font-size: 1.5rem;
+  line-height: 30px;
+  letter-spacing: 0.1rem;
+}
+.my-works .my-works-item img {
+  width: 100%;
+  max-width: 1000px;
+  border: 5px solid wheat;
+  border-radius: 10px;
+  margin: auto auto 15px;
+}
+.my-works .my-works-item .works-btn {
+  margin: auto;
+}
+.my-works .my-works-item .works-btn a {
+  text-decoration: none;
+  border: 2px solid #f2d091;
   padding: 5px 50px;
   border-radius: 5px;
-  border: 2px solid #d9a74a;
   background: #f0f0e6;
-  font-family: "Poppins", sans-serif;
+  color: black;
+  transition: background ease-in-out 0.7s, color ease-in-out 0.3s, border ease 0.5s, padding ease 1s;
   font-size: 1.5rem;
-}
-.works-btn a {
-  text-decoration: none;
-  color: #0d0d0d;
+  margin: auto;
+  width: 100%;
 }
 
 .my-certificates .certificates-carousel {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
 }
 .my-certificates .certificates-carousel img {
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 .my-certificates .certificates-carousel i {
   cursor: pointer;
+  width: 100px;
+  font-size: 2.5rem;
+  padding: 20px 0;
+  opacity: 0.3;
+  transition: opacity 0.7s ease;
+}
+.my-certificates .certificates-carousel i:hover {
+  opacity: 1;
 }
 
 .certificate-js.active,
 .certificate-wd.active {
   display: none;
-}
-
-#contact {
-  margin-bottom: 1000px;
 }
 
 .marquee-skills {
@@ -225,7 +263,7 @@ header {
 }
 .marque-item svg {
   height: 50px;
-  padding: 0 30px 0 30px;
+  padding: 0 10px;
 }
 
 @keyframes marqueeAnimation {
@@ -250,7 +288,7 @@ header {
     width: initial;
   }
   .nav-bar .nav-menu .nav-item {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .nav-bar .nav-menu .nav-item .nav-link {
     position: relative;
@@ -363,12 +401,59 @@ header {
     margin: auto;
     min-width: 450px;
   }
+  .right-box .my-skills p {
+    font-size: 1.5rem;
+  }
   .right-box .my-skills svg {
     height: 75px;
+    padding: 0 25px;
+  }
+  .right-box .my-works .my-works-item {
+    flex-flow: row wrap;
+  }
+  .right-box .my-works .my-works-item p {
+    width: 50%;
+    padding: 0 10px;
+    font-size: 2.5rem;
+  }
+  .right-box .my-works .my-works-item img {
+    width: 50%;
+  }
+  .right-box .my-works .javascript-item img {
+    order: 1;
+  }
+  .right-box .my-works .javascript-item p {
+    order: 2;
+  }
+  .right-box .my-works .javascript-item div {
+    order: 3;
+  }
+  .right-box .my-works .works-btn a:hover {
+    cursor: pointer;
+    background: #d9a74a;
+    color: #f2f2f2;
+    border: 0.5px solid #d9a74a;
+    padding: 5px 15px;
   }
   .right-box .my-certificates {
     width: 50%;
     margin: auto;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1226px) {
+  .nav-bar {
+    flex-direction: column;
+  }
+  .nav-bar .nav-menu .nav-item {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .nav-bar .nav-menu .nav-item {
+    font-size: 1.5rem;
+  }
+  .my-works .my-works-item p {
+    font-size: 2.75rem !important;
   }
 }
 @keyframes blinky {
