@@ -6,6 +6,11 @@ const angleRight = document.getElementById("angle-right");
 const angleLeft = document.getElementById("angle-left");
 const certificateWD = document.querySelector(".certificate-wd");
 const certificateJS = document.querySelector(".certificate-js");
+const resumeBtn = document.getElementById("resumeBtn")
+
+resumeBtn.addEventListener("click", () => {
+    window.location.href = './files/djvl-resume.pdf';
+})
 
 angleRight.onclick = certificate;
 angleLeft.onclick = certificate;

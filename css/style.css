@@ -248,6 +248,36 @@ header {
   display: none;
 }
 
+.my-resume {
+  height: 400px;
+  position: relative;
+  margin-top: 100px;
+}
+.my-resume .resume-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 35px 35px;
+  border: 1px solid #f2d091;
+  border-radius: 3px;
+  background: rgba(240, 240, 230, 0.4392156863);
+  position: absolute;
+  top: 40%;
+  width: 50%;
+  right: 0;
+  left: 0;
+  transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  box-shadow: 0px 0px 162px -15px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 0px 162px -15px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 162px -15px rgba(0, 0, 0, 0.4);
+}
+.my-resume .resume-btn a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .marquee-skills {
   width: 75%;
   height: 100px;
@@ -348,8 +378,8 @@ header {
     margin: auto;
   }
   .right-box header .home-container h1 {
-    font-size: 5rem;
-    font-weight: 400;
+    font-size: 4rem;
+    font-weight: 600;
   }
   .right-box header .home-container h1::after {
     width: 30px;
@@ -359,7 +389,7 @@ header {
     transform: translateX(-55%);
   }
   .right-box header .home-container p {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 300;
   }
   .right-box header .home-container img {
@@ -441,6 +471,18 @@ header {
   .right-box .my-certificates {
     width: 50%;
     margin: auto;
+  }
+  .right-box .my-resume .resume-btn {
+    box-shadow: none;
+    display: initial;
+    max-width: 500px;
+  }
+  .right-box .my-resume .resume-btn:hover {
+    cursor: pointer;
+    background: #f0f0e6;
+    box-shadow: 0px 0px 162px -15px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 0px 162px -15px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 162px -15px rgba(0, 0, 0, 0.4);
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1226px) {

@@ -83,8 +83,8 @@
                 margin: auto;
 
                 h1 {
-                    font-size: 5rem;
-                    font-weight: 400;
+                    font-size: 4rem;
+                    font-weight: 600;
 
                     &::after {
                         width: 30px;
@@ -96,7 +96,7 @@
                 }
 
                 p {
-                    font-size: 2.5rem;
+                    font-size: 2rem;
                     font-weight: 300;
                 }
 
@@ -214,6 +214,23 @@
             width: 50%;
             margin: auto;
         }
+
+        .my-resume {
+            .resume-btn {
+                box-shadow: none;
+                display: initial;
+                max-width: 500px;
+
+                &:hover {
+                    cursor: pointer;
+                    background: map-get($map: $colorMap, $key: "white");
+                    box-shadow: 0px 0px 162px -15px rgba(0, 0, 0, 0.4);
+                    -webkit-box-shadow: 0px 0px 162px -15px rgba(0, 0, 0, 0.4);
+                    -moz-box-shadow: 0px 0px 162px -15px rgba(0, 0, 0, 0.4);
+                }
+            }
+        }
+
     }
 
 }
